@@ -1,39 +1,166 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tamil Nadu Police Department - Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tamil Nadu Police Department - Demo</title>
+
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+    }
+
+    body {
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      background: linear-gradient(135deg, #071b33, #123d68);
     }
-    .login-container {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    .login-box {
+      width: 380px;
+      background: white;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       text-align: center;
-      width: 300px;
     }
-    .login-container img {
-      width: 80px;
-      margin-bottom: 15px;
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: #0b2d50;
+      color: #ffd700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+      font-weight: bold;
     }
-    .login-container h2 {
-      margin-bottom: 20px;
-      color: #003366;
+
+    h1 {
+      font-size: 22px;
+      color: #0b2d50;
+      margin-bottom: 5px;
     }
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
-      width: 100%;
+
+    h2 {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 25px;
+      font-weight: normal;
+    }
+
+    .demo {
+      background: #fff3cd;
+      color: #856404;
       padding: 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
       margin: 8px 0;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 6px;
+      font-size: 15px;
     }
-    .login-container
+
+    button {
+      width: 100%;
+      padding: 13px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 6px;
+      background: #0b2d50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #174d80;
+    }
+
+    #message {
+      margin-top: 18px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 11px;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-box">
+
+    <div class="logo">TN</div>
+
+    <h1>TAMILNADU POLICE DEPARTMENT</h1>
+    <h2>Official Login Portal — DEMO</h2>
+
+    <div class="demo">
+      DEMO PAGE — Do not enter real usernames or passwords.
+    </div>
+
+    <form id="loginForm">
+
+      <input
+        type="text"
+        id="username"
+        placeholder="Username"
+        autocomplete="off"
+        required
+      >
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        autocomplete="off"
+        required
+      >
+
+      <button type="submit">LOGIN</button>
+
+    </form>
+
+    <div id="message"></div>
+
+    <footer>
+      Demonstration / Educational Mockup Only
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      document.getElementById("message").textContent =
+        "Demo login only — no credentials were submitted or stored.";
+
+      document.getElementById("message").style.color = "#0b6b2a";
+    });
+  </script>
+
+</body>
+</html>
+```
